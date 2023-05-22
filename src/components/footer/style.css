@@ -1,0 +1,50 @@
+/*Footer*/
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+}
+.footer-container {
+  width: 1000px;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 1px;
+}
+.footer_title {
+  font-weight: 200;
+  font-size: 14px;
+  padding: 10px 0 18px 0;
+}
+.footer_text {
+  font-size: 18px;
+  font-weight: 200;
+}
+.footer-socNet {
+  padding: 10px 0 25px 0;
+}
+.footer-socNet_link {
+  margin: 3px;
+}
+.footer-socNet_link:hover {
+  opacity: 0.7;
+  transition: 0.2s ease-in;
+}
+.footer-socNet_img {
+  width: 27px;
+}
+
+
+.logoDev {
+  width: 19px;
+  border-radius: 50%;
+}
+.dev_disc {
+  font-size: 9px;
+  font-weight: 200;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+.dev:hover {
+  opacity: 0.7;
+  transition: 0.2s ease-in;
+}

@@ -1,0 +1,49 @@
+/*Header*/
+
+.header {
+  width: 1348px;
+  display: flex;
+  margin: 0 auto;
+}
+.header-left {
+  width: 449px;
+  margin-left: 174px;
+}
+.header-navbar {
+  display: flex;
+  padding-top: 20px;
+  column-gap: 30px;
+}
+.header-navbar_item {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 200;
+}
+.header-navbar_item:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in;
+}
+
+.header-body {
+  width: 260px;
+  margin-top: 220px;
+}
+.header_tite {
+  font-weight: 200;
+  font-size: 25px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+.header_text {
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.header-right {
+  background-image: url('../../img/headerBack.PNG');
+  background-repeat: no-repeat;
+  background-size: 1200px;
+  background-position: center center;
+  width: 725px;
+  height: 700px;
+}
