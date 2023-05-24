@@ -10,8 +10,8 @@ import './styles/main.css';
 
 function App() {
 
-  const [photoSetListName, setPhotoSetListName] = useState('Одиночные');
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const listPhotoSetsName = Object.keys(photoSetLists);
+  const [currentPhotoSetName, setCurrentPhotoSetName] = useState(listPhotoSetsName[0]);
   const [navbarElement, setNavbarElement] = useState(null);
   const [blogElement, setBlogElement] = useState(null);
 
@@ -22,15 +22,13 @@ function App() {
         blogElement={blogElement}
       />
       <Navbar
-        photoSetListName={photoSetListName}
-        setPhotoSetListName={setPhotoSetListName}
-        setCurrentIndex={setCurrentIndex}
+        listPhotoSetsName={listPhotoSetsName}
+        currentPhotoSetName={currentPhotoSetName}
+        setCurrentPhotoSetName={setCurrentPhotoSetName}
         setNavbarElement={setNavbarElement}
       />
       <Gallery
-        photoSetList={photoSetLists[photoSetListName]}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
+        photoSetList={photoSetLists[currentPhotoSetName]}
       />
       <Blog 
         setBlogElement={setBlogElement}

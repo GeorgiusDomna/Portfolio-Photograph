@@ -1,23 +1,18 @@
 import React from 'react';
 import './style.css';
 
-const Navbar = ({photoSetListName, setPhotoSetListName, setCurrentIndex, setNavbarElement}) => {
+const Navbar = ({listPhotoSetsName, currentPhotoSetName, setCurrentPhotoSetName, setNavbarElement}) => {
 
-  function getRefElem(ref) {
-    setNavbarElement(ref)
-  }
-
-  const list = ['Одиночные', 'Парные', 'Мерпоприятия']
   function switchSection(event, name) {
     event.preventDefault();
-    setPhotoSetListName(name);
-    setCurrentIndex(0);
+    setCurrentPhotoSetName(name);
   }
-  const navList = list.map(name => {
+  const navList = listPhotoSetsName.map(name => {
     return (
       <a
+        key={name}
         href='#'
-        className={photoSetListName == name ? 'navbar_item navbar_item-active' : 'navbar_item'}
+        className={currentPhotoSetName == name ? 'navbar_item navbar_item-active' : 'navbar_item'}
         onClick={(event) => switchSection(event, name)}>
         {name}
       </a>
@@ -25,7 +20,7 @@ const Navbar = ({photoSetListName, setPhotoSetListName, setCurrentIndex, setNavb
   })
 
   return (
-    <div ref={getRefElem} className="container">
+    <div ref={(ref) => setNavbarElement(ref)} className="container">
       <div className="navbar">
         {navList}
       </div>

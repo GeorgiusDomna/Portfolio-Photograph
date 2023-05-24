@@ -12,7 +12,7 @@ const Footer = () => {
         <p className="footer_text">+7(901)781-30-15</p>
         <p className="footer_text">gr.n@bk.ru</p>
         <div className="footer-socNet">
-          <a href="https://telegram.org/k/#@agranzh" className="footer-socNet_link" target='_blank' rel='noneferrer'>
+          <a href="https://t.me/agranzh" className="footer-socNet_link" target='_blank' rel='noneferrer'>
             <img src={img1} alt="" className="footer-socNet_img" />
           </a>
           <a href="https://vk.com/nastuhagranzh" className="footer-socNet_link" target='_blank' rel='noneferrer'>
@@ -27,5 +27,5 @@ const Footer = () => {
     </div>  
   );
 }
- 
+
 export default Footer;

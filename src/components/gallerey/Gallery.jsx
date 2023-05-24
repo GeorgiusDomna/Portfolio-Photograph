@@ -3,7 +3,7 @@ import Tile from './tile/Tile';
 import Slider from './slider/Slider';
 import './style.css';
 
-const Gallery = ({photoSetList, currentIndex, setCurrentIndex}) => {
+const Gallery = ({photoSetList}) => {
   return (
     <div className="container">
       <div className="gallery">
@@ -12,8 +12,6 @@ const Gallery = ({photoSetList, currentIndex, setCurrentIndex}) => {
         />
         <Slider
           sliderList={photoSetList.sliderList}
-          currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
         />
       </div>
     </div>  

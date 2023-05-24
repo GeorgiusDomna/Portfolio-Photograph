@@ -5,7 +5,6 @@
   background-color: black;
 }
 .footer-container {
-  width: 1000px;
   text-align: center;
   margin: auto;
   letter-spacing: 1px;
@@ -33,7 +32,7 @@
   width: 27px;
 }
 
-
+/*link on GitHub*/
 .logoDev {
   width: 19px;
   border-radius: 50%;

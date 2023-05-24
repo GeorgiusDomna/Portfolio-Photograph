@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 
-const Slider = ({sliderList, currentIndex, setCurrentIndex}) => {
+const Slider = ({sliderList}) => {
+
+  const [currentIndex, setCurrentIndex] = useState(0)
   const sliders = [];
   const dots = [];
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [sliderList]);
 
   function switchSlider(action) {
     if (action == 'next') {
@@ -15,6 +21,8 @@ const Slider = ({sliderList, currentIndex, setCurrentIndex}) => {
 
   for (let i = 0; i < sliderList.length; i++) {
     const slide = <img
+      key={sliderList[i]}
+      loading="lazy"
       src={sliderList[i]}
       alt="photo sessions"
       onClick={() => switchSlider('next')}
@@ -22,6 +30,7 @@ const Slider = ({sliderList, currentIndex, setCurrentIndex}) => {
     />
     sliders.push(slide);
     const dot = <span
+      key={sliderList[i]}
       className={i == currentIndex ? 'dot active' : 'dot'}
       onClick={() => setCurrentIndex(i)}
     />

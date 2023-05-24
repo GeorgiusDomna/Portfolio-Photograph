@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../../img/headerBack.webp';
 import './style.css'
 
 const Header = ({navbarElement, blogElement}) => {
@@ -24,7 +25,9 @@ const Header = ({navbarElement, blogElement}) => {
           </p>
         </div>
       </div>
-      <div className="header-right"></div>
+      <div className="header-right">
+        <img src={img} alt="" className="hedear_img" />
+      </div>
     </div> 
   )
 }
